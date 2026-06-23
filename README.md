@@ -146,16 +146,22 @@ Clinic-Wait-Time-Prediction/
 ├── README.md
 └── .gitignore
 
+```
+
 ---
 
 # 🎯 Future Improvements
-Deploy the application online
 
-Add real-time hospital queue integration
+* Deploy the application online
 
-Improve accuracy with advanced ML models
+* Add real-time hospital queue integration
 
-Add patient priority recommendation system
+* Improve accuracy with advanced ML models
+
+* Add patient priority recommendation system
+
+---
 
 # 👩‍💻 Author
-Siddhi Shinde
+
+**Siddhi Shinde**
