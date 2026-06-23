@@ -149,14 +149,13 @@ Clinic-Wait-Time-Prediction/
 ---
 
 # 🎯 Future Improvements
+Deploy the application online
 
-* Deploy the application online
-* Add real-time hospital queue integration
-* Improve accuracy with advanced ML models
-* Add patient priority recommendation system
+Add real-time hospital queue integration
 
----
+Improve accuracy with advanced ML models
+
+Add patient priority recommendation system
 
 # 👩‍💻 Author
-
-**Siddhi Vinod Shinde**
+Siddhi Shinde
