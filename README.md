@@ -148,22 +148,6 @@ Clinic-Wait-Time-Prediction/
 
 ---
 
-## 📷 Screenshots
-
-### Dashboard - Single Prediction
-
-[View Dashboard Screenshot](screenshots/dashboard_single_prediction.pdf)
-
-### Batch Prediction
-
-[View Batch Prediction Screenshot](screenshots/batch_prediction_upload.pdf)
-
-### Prediction History
-
-[View Prediction Logs](screenshots/prediction_history_logs.pdf)
-
----
-
 # 🎯 Future Improvements
 
 * Deploy the application online
