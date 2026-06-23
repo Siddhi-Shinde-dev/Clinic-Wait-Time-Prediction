@@ -145,7 +145,22 @@ Clinic-Wait-Time-Prediction/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-```
+
+---
+
+## 📷 Screenshots
+
+### Dashboard - Single Prediction
+
+[View Dashboard Screenshot](screenshots/dashboard_single_prediction.pdf)
+
+### Batch Prediction
+
+[View Batch Prediction Screenshot](screenshots/batch_prediction_upload.pdf)
+
+### Prediction History
+
+[View Prediction Logs](screenshots/prediction_history_logs.pdf)
 
 ---
 
@@ -161,4 +176,3 @@ Clinic-Wait-Time-Prediction/
 # 👩‍💻 Author
 
 **Siddhi Vinod Shinde**
-BSc Computer Science Student
