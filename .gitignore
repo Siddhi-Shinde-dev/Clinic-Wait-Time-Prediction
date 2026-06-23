@@ -10,5 +10,4 @@ __pycache__/
 venv/
 
 # Data and Model files (Optional but Recommended)
-*.csv
 *.pkl
