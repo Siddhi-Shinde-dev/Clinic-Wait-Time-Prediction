@@ -9,5 +9,3 @@ __pycache__/
 .env
 venv/
 
-# Data and Model files (Optional but Recommended)
-*.pkl
