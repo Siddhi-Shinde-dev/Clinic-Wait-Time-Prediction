@@ -1,167 +1,111 @@
 # 🏥 Clinic Wait Time Prediction System
 
-A **Machine Learning-based system** to forecast patient waiting time in clinical settings.
-This project uses historical Emergency Room (ER) data to predict how long a patient will wait based on visit details, urgency level, and facility resources.
+A **Machine Learning-based web application** that predicts patient wait times in a clinic/ER setting based on staffing, triage, and visit data.
+
+Built with **Streamlit** and **scikit-learn**, deployed on Streamlit Cloud.
 
 ---
 
-## 📌 Project Overview
+## 🚀 Live Demo
 
-The system processes healthcare data to predict **Total Wait Time (minutes)**.
-
-It includes:
-
-* Data cleaning and preprocessing
-* Feature engineering for time-based data
-* Training and comparison of multiple regression models
-* Real-time wait time prediction through an interactive Streamlit dashboard
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://clinic-wait-time-prediction-xjfzgowdftdocnhkvyvnyp.streamlit.app/)
 
 ---
 
-## ✨ Key Features
+## 📌 Features
 
-### 🔹 Single Prediction
-
-Enter patient visit details and get an instant wait time estimate.
-
-Inputs include:
-
-* Nurse-to-Patient Ratio
-* Registration Time
-* Triage Time
-* Urgency Level
-* Day of Week
+- 🔍 **Single Prediction** — Enter patient details and get instant wait time prediction
+- 📁 **Batch Prediction** — Upload a CSV file and predict for multiple patients at once
+- 📜 **Session History** — Track all predictions made during the session
+- 📊 **Gauge Chart** — Visual indicator of wait time severity
+- 💡 **Recommendations** — Actionable alerts based on predicted wait time
 
 ---
 
-### 🔹 Batch Prediction
+## 🧠 ML Model
 
-Upload a CSV file containing multiple patient records and generate predictions for all patients at once.
+| Algorithm | R² Score | MAE |
+|---|---|---|
+| **Linear Regression** ✅ | **0.954** | **10.21 min** |
+| Random Forest | 0.952 | 10.62 min |
+| KNN | 0.949 | 10.77 min |
+| Decision Tree | 0.921 | 13.32 min |
 
----
-
-### 🔹 Prediction History Tracking
-
-* Stores prediction records during the current session
-* Displays wait-time trends using interactive charts
-* Helps analyze prediction patterns
-
----
-
-### 🔹 Data Export
-
-Download prediction history as a CSV file for reporting and analysis.
+> Linear Regression was selected as the best model with **95.4% accuracy** and lowest MAE.
 
 ---
 
-# 🛠️ Technologies Used
+## 📂 Project Structure
 
-* Python
-* Streamlit
-* Pandas
-* NumPy
-* Scikit-learn
-* Pickle
-
----
-
-# 📊 Dataset Description
-
-The dataset contains **5,000 patient records**.
-
-### Features
-
-| Feature                | Description                       |
-| ---------------------- | --------------------------------- |
-| Nurse-to-Patient Ratio | Available nursing resources       |
-| Registration Time      | Time taken for registration       |
-| Triage Time            | Time taken for patient assessment |
-| Urgency Level          | Patient priority level            |
-| Day of Week            | Visit day information             |
-
-### Target Variable
-
-**Total Wait Time (minutes)**
+```
+Clinic-Wait-Time-Prediction/
+├── streamlit_app.py
+├── .gitignore
+├── requirements.txt
+├── wait_time_model.pkl
+├── notebooks/
+│   └── ClinicWaitingTimeprediction.ipynb
+├── Dataset/
+│   └── clinic_dataset.csv
+├── screenshots/
+│   ├── dashboard_single_prediction.pdf
+│   ├── batch_prediction_upload.pdf
+│   └── prediction_history_logs.pdf
+└── README.md
+```
 
 ---
 
-# 🤖 Machine Learning Models
+## ⚙️ Input Features
 
-The following regression models were trained and compared:
+| Feature | Description |
+|---|---|
+| Nurse-to-Patient Ratio | Number of patients per nurse |
+| Time to Registration (min) | Minutes taken for registration |
+| Time to Triage (min) | Minutes taken for triage |
+| Urgency Level | Low / Medium / High / Critical |
+| Day of Week | Monday (0) to Sunday (6) |
 
-* Linear Regression
-* Decision Tree Regressor
-* Random Forest Regressor
-* K-Nearest Neighbors (KNN) Regressor
-
-The best-performing model was selected and saved for deployment.
+**Target:** `Total Wait Time (min)`
 
 ---
 
-# 🚀 How to Run
+## 🛠️ Tech Stack
 
-## 1. Clone Repository
+- **Frontend:** Streamlit
+- **ML:** scikit-learn, pandas, numpy
+- **Visualization:** Plotly, Matplotlib
+- **Model Persistence:** joblib
+- **Deployment:** Streamlit Cloud
+
+---
+
+## 📦 Installation (Run Locally)
 
 ```bash
-git clone <https://github.com/Siddhi-Shinde-dev/Clinic-Wait-Time-Prediction>
-
+# Clone the repo
+git clone https://github.com/Siddhi-Shinde-dev/Clinic-Wait-Time-Prediction
 cd Clinic-Wait-Time-Prediction
-```
 
-## 2. Install Dependencies
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
-## 3. Run Application
-
-```bash
+# Run the app
 streamlit run streamlit_app.py
 ```
 
 ---
 
-# 📁 Project Structure
+## 📊 Dataset
 
-```
-Clinic-Wait-Time-Prediction/
-
-│
-├── Dataset/
-│   └── clinic_dataset.csv
-│
-├── notebooks/
-│   └── ClinicWaitingTimePrediction.ipynb
-│
-├── screenshots/
-│   ├── batch_prediction_upload.pdf
-│   ├── dashboard_single_prediction.pdf
-│   └── prediction_history_logs.pdf
-│
-├── app.py
-├── streamlit_app.py
-├── wait_time_model.pkl
-├── requirements.txt
-├── README.md
-└── .gitignore
-
-```
+- **Source:** ER Wait Time Dataset (Kaggle)
+- **Features:** 5 input features
+- **Target:** Total Wait Time (min)
+- **Train/Test Split:** 80/20
 
 ---
 
-# 🎯 Future Improvements
+## 👩‍💻 Developer
 
-* Deploy the application online
+**Siddhi Vinod Shinde**  
 
-* Add real-time hospital queue integration
-
-* Improve accuracy with advanced ML models
-
-* Add patient priority recommendation system
-
----
-
-# 👩‍💻 Author
-
-**Siddhi Shinde**
