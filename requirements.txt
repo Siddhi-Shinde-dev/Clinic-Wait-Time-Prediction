@@ -5,3 +5,5 @@ flask
 streamlit
 joblib
 matplotlib
+streamlit
+plotly
